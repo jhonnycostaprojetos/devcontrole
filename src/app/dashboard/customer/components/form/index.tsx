@@ -34,6 +34,7 @@ const router = useRouter();
       address: data.address,
       userId: userId
     })
+    router.refresh();
     router.replace("/dashboard/customer")
   }
 
