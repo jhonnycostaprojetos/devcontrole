@@ -27,7 +27,7 @@ model Ticket {
   id          String    @id @default(auto()) @map("_id") @db.ObjectId
   name        String
   description String
-  Status      String
+  status      String
   created_at  DateTime? @default(now())
   updated_at  DateTime? @default(now())
 
@@ -72,8 +72,8 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-  Ticket        Ticket[]
-  customer      Customer[]
+  tickets       Ticket[]
+  customers     Customer[]
 }
 
 model VerificationToken {
